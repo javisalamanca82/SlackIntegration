@@ -1,6 +1,5 @@
 codeunit 50000 "Slack Management"
 {
-
     var
         RestClient: Codeunit "Rest Client";
         RestAPIManagement: Codeunit "Rest API Management";
@@ -10,7 +9,6 @@ codeunit 50000 "Slack Management"
     begin
         RestAPIManagement.SendRequest(Webhook, RestAPIMethod::POST, Payload, 'application/json')
     end;
-
 
     procedure SendSimpleMessageWithWebhookWithRestClient(Webhook: text; Payload: Text)
     var
